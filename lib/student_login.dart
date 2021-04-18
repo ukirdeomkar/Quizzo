@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:quizzo_app/student_home.dart';
 import 'Adminhome.dart';
+import 'main.dart';
 
-class AdminLogin extends StatefulWidget {
+class StudentLogin extends StatefulWidget {
   @override
+  StudentLogin({this.userType});
+  final userType;
   //final userHome;
-  _AdminState createState() => _AdminState();
+  _State createState() => _State();
 }
 
-class _AdminState extends State<AdminLogin> {
+class _State extends State<StudentLogin> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -16,7 +19,7 @@ class _AdminState extends State<AdminLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Admin Login'),
+          title: Text(' Student Login'),
         ),
         body: Padding(
             padding: EdgeInsets.all(10),
@@ -26,7 +29,7 @@ class _AdminState extends State<AdminLogin> {
                     alignment: Alignment.center,
                     padding: EdgeInsets.all(10),
                     child: Text(
-                      'ADMIN',
+                      'Student',
                       style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.w500,
@@ -78,7 +81,7 @@ class _AdminState extends State<AdminLogin> {
                       color: Colors.blue,
                       child: Text('Login'),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/adminhome');
+                        Navigator.pushNamed(context, '/student');
                         print(nameController.text);
                         print(passwordController.text);
                       },

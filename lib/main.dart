@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:quizzo_app/student_login.dart';
 import 'Login.dart';
+import 'Adminhome.dart';
+import 'student_home.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Quizzo());
 }
 
-class MyApp extends StatelessWidget {
+class Quizzo extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'QUIZZO',
-      theme: ThemeData.dark(),
+      theme: ThemeData(primaryColor: Colors.yellow[800]),
       home: MyHomePage(),
     );
   }
@@ -26,52 +30,74 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           //crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-             // crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                GestureDetector(
-                  onTap: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Login(userType: 'Admin')),
-                    );                  },
-                  child: Expanded(
-                    child: Column(
-                      children: [
-                        Icon(
-                          Icons.account_circle,
-                          size: 70,
-                        ),
-                        Text('Admin')
-                      ],
+            Expanded(
+              flex: 2,
+              child: SizedBox(
+                height: 0,
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                // crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AdminLogin()),
+                      );
+                    },
+                    child: Expanded(
+                      child: Column(
+                        children: [
+                          Icon(
+                            Icons.account_circle,
+                            size: 70,
+                          ),
+                          Text('Admin')
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                GestureDetector(
-                  onTap: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Login(userType: 'Student')),
-                    );
-                  },
-                  child:Expanded(
-                  child: Column(
-                    children: [
-                      Icon(
-                        Icons.accessibility,
-                        size: 70,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => StudentLogin()),
+                      );
+                    },
+                    child: Expanded(
+                      child: Column(
+                        children: [
+                          Icon(
+                            Icons.accessibility,
+                            size: 70,
+                          ),
+                          Text('Student')
+                        ],
                       ),
-                      Text('Student')
-                    ],
+                    ),
                   ),
-                ),
-                ),
-              ],
+                ],
+              ),
             ),
+            Expanded(
+                flex: 1,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'images/quizzo.png',
+                      height: 100,
+                      width: 200,
+                    ),
+                  ],
+                ))
           ],
         ),
       ),
