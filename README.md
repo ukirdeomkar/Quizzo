@@ -1,16 +1,22 @@
-# quizzo_app
+## QuizzoApp : An app to make as many quizzes you want!
 
-A new Flutter application.
+### :watermelon: Motivation:
+  
+  - The pandemic pushed the education system entirely to be online
+  - Even exams are conducted online by using forms or private applications
+  - An app which can be used easily by teachers and students must be developed
+  - Apart from using for educational purposes, the app can be used to create fun quizzes
+  
 
-## Getting Started
+### :man_teacher: Usage:
 
-This project is a starting point for a Flutter application.
+  - Create quizes with options ranging from MCQ input or subjecctive answers
+  - Choose a grading system or create one of your own
+  - A user can be an admin or a test taker
+  - A test taker will be allowed the number of attempts set by the admin
+  - An admin can directly keep track of the score
+  - Easy way of conducting exams
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+  
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
