@@ -38,7 +38,7 @@ class _AdminHomeState extends State<AdminHome> {
               IconButton(
                   onPressed: () => Navigator.pushNamed(context, '/student'),
                   icon: Icon(
-                    Icons.logout_rounded,
+                    Icons.logout,
                     color: Colors.white,
                   ))
             ],
@@ -99,12 +99,13 @@ class _AdminHomeState extends State<AdminHome> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.quiz), label: "My Quiz"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.live_help), label: "My Quiz"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.add_circle_outline), label: "Create Quiz"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.format_list_numbered), label: "Rank"),
-            BottomNavigationBarItem(icon: Icon(Icons.groups), label: "Student"),
+            BottomNavigationBarItem(icon: Icon(Icons.group), label: "Student"),
           ],
         ),
       ),

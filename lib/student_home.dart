@@ -42,7 +42,7 @@ class _StudentHomeState extends State<StudentHome> {
                         ModalRoute.withName('/'),
                       ),
                   icon: Icon(
-                    Icons.logout_rounded,
+                    Icons.logout,
                     color: Colors.white,
                   ))
             ],
@@ -103,7 +103,8 @@ class _StudentHomeState extends State<StudentHome> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.quiz), label: "My Quiz"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.live_help), label: "My Quiz"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.format_list_numbered), label: "Rank"),
             BottomNavigationBarItem(

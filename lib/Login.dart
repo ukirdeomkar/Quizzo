@@ -79,6 +79,7 @@ class _AdminState extends State<AdminLogin> {
                       child: Text('Login'),
                       onPressed: () {
                         Navigator.pushNamed(context, '/adminhome');
+                        
                         print(nameController.text);
                         print(passwordController.text);
                       },

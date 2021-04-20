@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:quizzo_app/screens/sign_in_screen.dart';
 import 'package:quizzo_app/student_login.dart';
 import 'Login.dart';
 import 'Adminhome.dart';
 import 'student_home.dart';
+import '/screens/sign_in_screen.dart';
 
 void main() {
   runApp(Quizzo());
@@ -49,7 +51,7 @@ class MyHomePage extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => AdminLogin()),
+                        MaterialPageRoute(builder: (context) => SignInScreen()),
                       );
                     },
                     child: Expanded(
@@ -68,7 +70,7 @@ class MyHomePage extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => StudentLogin()),
+                        MaterialPageRoute(builder: (context) => SignInScreen()),
                       );
                     },
                     child: Expanded(
