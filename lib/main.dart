@@ -20,7 +20,7 @@ class Quizzo extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'QUIZZO',
-      theme: ThemeData(primaryColor: Colors.yellow[800]),
+      theme: ThemeData(primaryColor: Colors.blue[800]),
       home: Home(),
     );
   }
