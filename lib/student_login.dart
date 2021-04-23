@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizzo_app/student_home.dart';
-import 'Adminhome.dart';
+import 'screens/Adminhome.dart';
 import 'main.dart';
 
 class StudentLogin extends StatefulWidget {

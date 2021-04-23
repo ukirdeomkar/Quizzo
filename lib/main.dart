@@ -1,8 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:quizzo_app/res/custom_colors.dart';
 import 'package:quizzo_app/screens/sign_in_screen.dart';
 import 'package:quizzo_app/student_login.dart';
 import 'Login.dart';
-import 'Adminhome.dart';
+import 'screens/Adminhome.dart';
 import 'student_home.dart';
 import '/screens/sign_in_screen.dart';
 
@@ -18,8 +21,30 @@ class Quizzo extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'QUIZZO',
       theme: ThemeData(primaryColor: Colors.yellow[800]),
-      home: MyHomePage(),
+      home: Home(),
     );
+  }
+}
+
+class Home extends StatefulWidget {
+  @override
+  SplashScreenState createState() => SplashScreenState();
+}
+
+class SplashScreenState extends State<Home> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 3),
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => MyHomePage())));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        color: Colors.white, child: Image.asset('images/quizzo.png'));
   }
 }
 

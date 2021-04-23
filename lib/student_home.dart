@@ -101,7 +101,7 @@ class _StudentHomeState extends State<StudentHome> {
           selectedItemColor: Colors.orange,
           backgroundColor: Colors.yellow[200],
           type: BottomNavigationBarType.fixed,
-          items: [
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.live_help), label: "My Quiz"),

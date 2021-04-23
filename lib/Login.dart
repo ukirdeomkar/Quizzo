@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizzo_app/student_home.dart';
-import 'Adminhome.dart';
+import 'screens/Adminhome.dart';
 
 class AdminLogin extends StatefulWidget {
   @override
@@ -79,7 +79,7 @@ class _AdminState extends State<AdminLogin> {
                       child: Text('Login'),
                       onPressed: () {
                         Navigator.pushNamed(context, '/adminhome');
-                        
+
                         print(nameController.text);
                         print(passwordController.text);
                       },
